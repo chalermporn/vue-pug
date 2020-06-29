@@ -1,3 +1,5 @@
 module.exports = {
-  parallel: false
+  parallel: false,
+  publicPath: ''
+
 }
