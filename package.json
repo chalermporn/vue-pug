@@ -2,16 +2,14 @@
   "name": "vue-pug",
   "version": "0.1.0",
   "private": true,
-  "wst": "/dist/",
-  "homepage": "https://github.com/chalermporn/vue-pug",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "predeploy": "git add . && git commit -m \"deploy\" && git push -f",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages",
+    "predeploy": "git add . && git commit -m \"deploy\" && git push -f"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -21,6 +19,8 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "~2.2.0",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-e2e-cypress": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
@@ -32,17 +32,17 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "eslint": "^6.7.2",
     "lint-staged": "^9.5.0",
-    "pug-plain-loader": "^1.0.0",
     "pug": "^3.0.0",
-    "sass-loader": "^8.0.2",
+    "pug-plain-loader": "^1.0.0",
     "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
     "vue-cli-plugin-pug": "~1.0.7",
     "vue-gh-pages": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
@@ -50,10 +50,12 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "homepage": "https://github.com/chalermporn/vue-pug",
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "wst": "/dist/"
 }
