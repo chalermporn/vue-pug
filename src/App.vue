@@ -4,6 +4,7 @@
       router-link(to='/') Home
       | |
       router-link(to='/about') About
+      p(class='bird2') test
       p(class='bird1') test
     router-view.
 </template>
@@ -34,6 +35,9 @@
   color: red;
 }
 .bird1 {
-  color: yellow;
+  color: blue;
+}
+.bird2 {
+  color: green;
 }
 </style>
