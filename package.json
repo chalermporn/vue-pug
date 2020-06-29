@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages && node ./node_modules/vue-gh-pages/index.js -m \"deploy to gh-pages\"",
     "predeploy": "git add . && git commit -m \"deploy\" && git push -f"
   },
   "dependencies": {
