@@ -4,7 +4,7 @@
       router-link(to='/') Home
       | |
       router-link(to='/about') About
-      p(class='bird') test
+      p(class='bird1') test
     router-view.
 </template>
 
