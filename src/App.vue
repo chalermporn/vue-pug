@@ -6,6 +6,7 @@
       router-link(to='/about') About
       p(class='bird2') test
       p(class='bird1') test
+      p(class='grid') grid
     router-view.
 </template>
 
@@ -39,5 +40,8 @@
 }
 .bird2 {
   color: green;
+}
+.grid {
+  display: grid;
 }
 </style>
